@@ -7,6 +7,9 @@ WORKDIR $APP_ROOT
 
 ADD . $APP_ROOT
 
+# どう考えても不適切だけど他に思いつかない
+RUN gem install bundler:2.2.9
+
 RUN apk update \
     && apk add --update --no-cache \
       bash \
